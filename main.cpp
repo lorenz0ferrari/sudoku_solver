@@ -10,9 +10,12 @@
 #include <iomanip>
 #include <ctime>
 
+#define INPUT_FILE "input.txt"
+#define OUTPUT_FILE "output.txt"
+
 int main() {
-	freopen ("input.txt", "r", stdin);
-	freopen ("output.txt", "w", stdout);
+	freopen (INPUT_FILE, "r", stdin);
+	freopen (OUTPUT_FILE, "w", stdout);
 
 	int grid[9][9] {};
 	int analysisCounter { 0 };
