@@ -27,6 +27,7 @@ input.txt:
 
 output.txt:
 
+```
 SOLUTION:
 
 8 1 2  7 5 3  6 4 9  
@@ -43,3 +44,4 @@ SOLUTION:
 
 445779 grids analyzed
 Sudoku solved in 0.439 seconds
+```
