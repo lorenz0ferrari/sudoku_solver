@@ -13,17 +13,17 @@
 #define OUTPUT_FILE "output.txt"
 
 int main() {
-	freopen (INPUT_FILE, "r", stdin);
-	freopen (OUTPUT_FILE, "w", stdout);
+  freopen (INPUT_FILE, "r", stdin);
+  freopen (OUTPUT_FILE, "w", stdout);
 
-	int grid[9][9] {};
-	int analysisCounter { 0 };
-	bool gridFound { false };
-	getGrid(grid);
+  int grid[9][9] {};
+  int analysisCounter { 0 };
+  bool gridFound { false };
+  getGrid(grid);
 
-	getBeginTime();
-	findASolution(grid, analysisCounter, gridFound);
+  getBeginTime();
+  findASolution(grid, analysisCounter, gridFound);
 
-	getEndTime();
-	printExecTime();
+  getEndTime();
+  printExecTime();
 }

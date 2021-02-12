@@ -48,45 +48,45 @@ bool contraddiction(int grid[9][9]) {
 
 
 bool isFull(int grid[9][9]) {
-	for (int i = 0; i < 9; i++) {
-		for (int j = 0; j < 9; j++) {
-			if (grid[i][j] == 0) {
-				return false;
-			}
-		}
-	}
+  for (int i = 0; i < 9; i++) {
+    for (int j = 0; j < 9; j++) {
+      if (grid[i][j] == 0) {
+        return false;
+      }
+    }
+  }
 
-	return true;
+  return true;
 }
 
 
 void findASolution(int grid[9][9], int &analysisCounter, bool &gridFound) {
-	if (gridFound) {
-		return;
-	}
-	analysisCounter++;
+  if (gridFound) {
+    return;
+  }
+  analysisCounter++;
 
-	if (contraddiction(grid)) {
-		return;
-	}
+  if (contraddiction(grid)) {
+    return;
+  }
 
-	if (isFull(grid)) {
-		gridFound = true;
-		printGrid(grid, analysisCounter);
-		return;
-	}
+  if (isFull(grid)) {
+    gridFound = true;
+    printGrid(grid, analysisCounter);
+    return;
+  }
 
-	for (int i = 0; i < 9; i++) {
-		for (int j = 0; j < 9; j++) {
-			if (grid[i][j] == 0) {
-				for (int val = 1; val <= 9; val++) {
-					grid[i][j] = val;
-					findASolution(grid, analysisCounter, gridFound);
-				}
-				grid[i][j] = 0;
+  for (int i = 0; i < 9; i++) {
+    for (int j = 0; j < 9; j++) {
+      if (grid[i][j] == 0) {
+        for (int val = 1; val <= 9; val++) {
+          grid[i][j] = val;
+          findASolution(grid, analysisCounter, gridFound);
+        }
+        grid[i][j] = 0;
 
-				return;
-			}
-		}
-	}
+        return;
+      }
+    }
+  }
 }
