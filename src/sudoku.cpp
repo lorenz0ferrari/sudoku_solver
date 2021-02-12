@@ -1,20 +1,9 @@
-#include "output.h"
+#include "io.h"
 #include "sudoku.h"
 
-// #ifndef GRID_FOUND
-// #define GRID_FOUND
-// bool gridFound { false };
-// #endif
 
-// #ifndef ANALYSIS_COUNTER
-// #define ANALYSIS_COUNTER
-// int analysisCounter { 0 };
-// #endif
-
-#ifndef CONTRADDICTION
-#define CONTRADDICTION
 bool contraddiction(int grid[9][9]) {
-  // check for rows
+  // check rows
   for (int i = 0; i < 9; i++) {
     bool seen[10] {};
     for (int j = 0; j < 9; j++) {
@@ -56,10 +45,8 @@ bool contraddiction(int grid[9][9]) {
 
   return false;
 }
-#endif
 
-#ifndef IS_FULL
-#define IS_FULL
+
 bool isFull(int grid[9][9]) {
 	for (int i = 0; i < 9; i++) {
 		for (int j = 0; j < 9; j++) {
@@ -71,10 +58,8 @@ bool isFull(int grid[9][9]) {
 
 	return true;
 }
-#endif
 
-#ifndef FIND_A_SOLUTION
-#define FIND_A_SOLUTION
+
 void findASolution(int grid[9][9], int &analysisCounter, bool &gridFound) {
 	if (gridFound) {
 		return;
@@ -105,4 +90,3 @@ void findASolution(int grid[9][9], int &analysisCounter, bool &gridFound) {
 		}
 	}
 }
-#endif

@@ -1,17 +1,11 @@
-#include "execTime.h"
 #include <iostream>
 #include <iomanip>
 #include <ctime>
 
-#ifndef CLOCK_BEGIN
-#define CLOCK_BEGIN
-clock_t clockBegin;
-#endif
+#include "execTime.h"
 
-#ifndef CLOCK_END
-#define CLOCK_END
+clock_t clockBegin;
 clock_t clockEnd;
-#endif
 
 void getBeginTime() {
 	clockBegin = clock();

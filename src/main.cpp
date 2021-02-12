@@ -1,14 +1,13 @@
 //Lorenzo Ferrari - 01/01/2021
 //Sudoku Solver - Backtracking
 
-#include "input.h"
-#include "output.h"
-#include "sudoku.h"
-#include "execTime.h"
-
 #include <iostream>
 #include <iomanip>
 #include <ctime>
+
+#include "io.h"
+#include "sudoku.h"
+#include "execTime.h"
 
 #define INPUT_FILE "input.txt"
 #define OUTPUT_FILE "output.txt"

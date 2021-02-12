@@ -1,9 +1,8 @@
-#include "output.h"
-#include "sudoku.h"
+#include <cassert>
 #include <iostream>
 
-#ifndef PRINT_GRID
-#define PRINT_GRID
+#include "io.h"
+
 void printGrid(int grid[9][9], int analysisCounter) {
 	std::cout << "SOLUTION:" << "\n\n";
 
@@ -24,4 +23,14 @@ void printGrid(int grid[9][9], int analysisCounter) {
 
 	std::cout << analysisCounter << " grids analyzed" << "\n";
 }
-#endif
+
+void getGrid(int grid[9][9]) {
+	for (int i = 0; i < 9; i++) {
+		for (int j = 0; j < 9; j++) {
+			char c;
+			std::cin >> c;
+			assert(c >= '0' && c <= '9');
+			grid[i][j] = static_cast <int> (c - '0');
+		}
+	}
+}
